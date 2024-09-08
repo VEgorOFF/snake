@@ -116,11 +116,10 @@ function move() {
 
   //завешение игры
   if (snakeBody[0].classList.contains("snakeBody")) {
-    localStorage.setItem("key", score);
-
     if (score > localStorage.getItem("key")) {
       record = score;
       localStorage.setItem("key", record);
+      input2.style = "display: block;";
       input2.value = `Рекорд: ${localStorage.getItem("key")}`;
     } else {
       input2.value = `Рекорд: ${localStorage.getItem("key")}`;
